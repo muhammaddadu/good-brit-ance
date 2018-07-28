@@ -1,0 +1,44 @@
+{
+    "questions": [
+        {
+            "background": "yellow",
+            "color": "rgb(159, 48, 0)",
+            "image": "1.png",
+            "text": "You are watching a show about a political topic. Jeremy Clarkson appears on it to give his opinion. Do you:",
+            "answers": [
+                {
+                    "text": "A: Become angered by his opinions and give the fact that he's been given a platform to air them.",
+                    "value": "-3"
+                },
+                {
+                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "value": "0"
+                },
+                {
+                    "text": "C: Find your self nodding in agreement to everything he's saying.",
+                    "value": "3"
+                }
+            ]
+        },
+        {
+            "background": "purple",
+            "color": "white",
+            "image": "2.png",
+            "text": "You are watching a show about a political topic. xxxxx. Do you:",
+            "answers": [
+                {
+                    "text": "A: Become angered by his opinxxxxn a platform to air them.",
+                    "value": "-3"
+                },
+                {
+                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "value": "0"
+                },
+                {
+                    "text": "C: Find your self nodding in agreement to everything he's saying.",
+                    "value": "3"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<ion-content padding
+  [style.background-color]="question.background">
+  <question-answer
+    [questions]="questions"
+    [selectedQuestionNumber]="questionNumber"
+    [selectedQuestion]="question"
+    (selectedAnswer)="onSelectedAnswer($event)">
+  </question-answer>
+</ion-content>

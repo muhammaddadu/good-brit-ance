@@ -11,7 +11,7 @@ export class IntroductionPage {
     public navParams: NavParams
   ) {}
 
-  ionViewDidLoad() {
-    console.log('view did load');
+  start() {
+    this.navCtrl.push('QuestionarePage', {id: 1});
   }
 }

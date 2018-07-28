@@ -1,0 +1,23 @@
+<page-card-action class="gb-question-answer">
+  <div class="gb-question-answer--title"
+       [style.color]="selectedQuestion.color">
+    QUESTION {{selectedQuestionNumber}}/{{questions.length}}
+  </div>
+
+  <div class="gb-question-answer--image"
+       [ngStyle]="{'background-image': 'url(/assets/questions/' + selectedQuestion.image + ')'}">
+  </div>
+
+  <div class="gb-question-answer--question"
+       [style.color]="selectedQuestion.color">
+      <p>{{selectedQuestion.text}}</p>
+  </div>
+
+  <ul class="gb-question-answer--answers">
+    <li class="gb-question-answer--answers-answer"
+        *ngFor="let item of selectedQuestion.answers"
+        (click)="selectAnswer(item)">
+        <p>{{item.text}}</p>
+    </li>
+  </ul>
+</page-card-action>
