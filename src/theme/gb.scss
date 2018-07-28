@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('../assets/fonts/PressStart2P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.gb-font-light {
+    color: map-get($colors, 'light');
+}
+
+.gb-font-subtitle {
+    font-family: 'PressStart2P';
+    text-align: center;
+    text-decoration: black;
+    line-height: 1.6em;
+}
+
+* { font-family: 'PressStart2P'; }

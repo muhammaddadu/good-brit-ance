@@ -1,0 +1,20 @@
+page-card-action {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    margin: 0 auto;
+    max-width: 400px;
+
+    .page-card--header {
+        display: flex;
+        height: 250px;
+        flex-direction: column;
+    }
+
+    .page-card--content {
+        display: flex;
+        flex-grow: 2;
+    }
+}

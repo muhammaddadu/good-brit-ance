@@ -1,0 +1,82 @@
+page-introduction {
+    .content {
+        background-color: map-get($colors, 'primary');
+        background-image: url('/assets/gb/introduction-bg-bottom.png');
+        background-repeat: repeat-x;
+        background-position: bottom left;
+        background-size: 100% 25%;
+    }
+
+    .gb-introduction-title {
+        flex-grow: 2;
+        background-image: url('/assets/gb/introduction-title.png');
+        background-position: bottom center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;
+    }
+
+    .gb-introduction-subtitle {
+        padding: 15px;
+    }
+
+    .gb-introduction-clouds {
+        height: 120px;
+    }
+
+    .gb-introduction-cloud--1 {
+        position: absolute;
+        left: 0;
+        width: 20vh;
+        height: 20vh;
+        background-image: url('/assets/gb/Cloud1@2x.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .gb-introduction-cloud--2 {
+        position: absolute;
+        left: 40%;
+        width: 14vh;
+        height: 14vh;
+        background-image: url('/assets/gb/Cloud2@2x.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .gb-introduction-cloud--3 {
+        position: absolute;
+        margin-top: 20px;
+        right: 0;
+        width: 17vh;
+        height: 17vh;
+        background-image: url('/assets/gb/Cloud3@2x.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .gb-introduction-cloud--moving {
+        animation: animateCloud 20s linear infinite;
+    }
+
+    .gb-introduction-flag {
+        background-image: url('/assets/gb/gb-flag-pole.png');
+        position: absolute;
+        height: 50vh;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@keyframes animateCloud {
+    0% {
+        margin-left: -1000px;
+    }
+    100% {
+        margin-left: 100%;
+    }
+}
