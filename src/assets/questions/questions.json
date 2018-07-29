@@ -32,23 +32,223 @@
             "background": "purple",
             "color": "white",
             "image": "2.png",
-            "text": "You are watching a show about a political topic. xxxxx. Do you:",
+            "text": "You`re in a city centre. You see a 20 something man walking round wearing deep v t-shirt, skin tight fashin-ripped jeans and flip-flops. Your first thought is:",
             "answer": 0,
             "answers": [
                 {
                     "id": "0",
-                    "text": "A: Become angered by his opinxxxxn a platform to air them.",
+                    "text": "A: Tool",
                     "value": -3
                 },
                 {
                     "id": "1",
-                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "text": "B: Indifferent.",
                     "value": 0
                 },
                 {
                     "id": "2",
-                    "text": "C: Find your self nodding in agreement to everything he's saying.",
+                    "text": "C: Great look, where`s the nearing Top Shop!",
                     "value": -3
+                }
+            ]
+        },
+        {
+            "uuid": "3",
+            "background": "green",
+            "color": "white",
+            "image": "3.png",
+            "text": "You`re on holiday in a foreign contry and want to get something to eat. Do you:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: I don`t tend to traval abroad",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Find somewhere interesting that serves the local food.",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Make a beeline for the nearest Mc Donald`s.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "4",
+            "background": "maroon",
+            "color": "white",
+            "image": "4.png",
+            "text": "You`re driving and listening to the radio when a Bruno Mars song comes on. Which of the following do you do:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: Wonder if Bruno Mars is playing at the 02 any time soon.",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Hmm along without really listening.",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Immediately Turn the radio off, or over to a different channel.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "5",
+            "background": "blue",
+            "color": "white",
+            "image": "5.png",
+            "text": "You`re in the centre of London - a capital city rich in culture and history. You walk by M&M world. Do you think:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: Just what I need an M&M towel / t-shirt / slippers / ashtray!",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Why does London need an M&M World??",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: I'm not really a city person.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "6",
+            "background": "yellow",
+            "color": "maroon",
+            "image": "6.png",
+            "text": "You`re sat at home with your significant other and they are watching TOWIE. You think:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: This is bollocks",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: It's just something to have on.",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: This is great TV.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "7",
+            "background": "lightblue",
+            "color": "white",
+            "image": "7.png",
+            "text": "You are in an art gallery with a contemporary art exhibition. Are you likely to think:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: It`s not all to my taste, but some of it`s interesting.",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: I`d never visit an art gallery..",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Not for me. I think I prefer watercolours.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "8",
+            "background": "turquoise",
+            "color": "white",
+            "image": "8.png",
+            "text": "When you see an image of Boris Johnson do you think:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: My god, how can this person be the UK`s Foreign Secretary - the person who`s supposed to represent the UK (a developed nation) around the world!",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Excellent chap that Boris Johnson",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Who`s Boris Johnson.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "9",
+            "background": "lightpink",
+            "color": "black",
+            "image": "9.png",
+            "text": "You`re reading a Daily Mail article on the EU. Your thoughts are:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: I don`t read newspapers",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Bloody foreiners, always trying to get into our country to steal our jobs and they don`t speak out language or understand our culture",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Hang on... there`s no way I`d be reading the Daily Mail.",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "uuid": "10",
+            "background": "pink",
+            "color": "black",
+            "image": "10.png",
+            "text": "It`s a royal wedding / birth / funeral. What`s your reaction:",
+            "answer": 0,
+            "answers": [
+                {
+                    "id": "0",
+                    "text": "A: AMAZING, best news ever. I`m off to get a prime spot outside Buckingham Palace / Windsor Castle right now!",
+                    "value": 3
+                },
+                {
+                    "id": "1",
+                    "text": "B: Day off work: PARTY TIME!",
+                    "value": -3
+                },
+                {
+                    "id": "2",
+                    "text": "C: Great day for the country I suppose",
+                    "value": 0
                 }
             ]
         }

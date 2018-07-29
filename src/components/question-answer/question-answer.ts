@@ -21,6 +21,16 @@ export class QuestionAnswerComponent {
   constructor() {}
 
   selectAnswer(answer) {
-    this.onUserSelectAnswer.emit(answer);
+    let cssClass = answer.value > 0
+      ? '--plus'
+      : answer.value < 0
+        ? '--minus'
+        : '--nutral';
+
+    answer.cssClass = cssClass;
+
+    setTimeout(() => {
+      this.onUserSelectAnswer.emit(answer);
+    }, 100);
   }
 }

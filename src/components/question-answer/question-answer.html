@@ -16,6 +16,7 @@
   <ul class="gb-question-answer--answers">
     <li class="gb-question-answer--answers-answer"
         *ngFor="let item of selectedQuestion.answers"
+        [ngClass]="item.cssClass"
         (click)="selectAnswer(item)">
         <p>{{item.text}}</p>
     </li>
