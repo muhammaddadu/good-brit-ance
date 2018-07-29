@@ -6,6 +6,15 @@ page-results {
         background-size: cover;
     }
 
+    .gb-results--title {
+        background-image: url('/assets/gb/results-title.png');
+        background-position: bottom center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;
+        width: 100%;
+        height: 40px;
+    }
 
     .gb-results--content {
         align-items: center;
