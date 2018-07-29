@@ -16,11 +16,12 @@ export class QuestionareProvider {
     this.questionareUUID = QUESTIONARE_ID;
   }
 
-  getQuestionare(resetCache = false) {
+  getQuestionare(resetCache?) {
     let newQuestionareData;
 
-    if (this.questionareData && resetCache) {
-      this.questionareData.version = 'hard-reset';
+    if (resetCache) {
+      console.log('resetting cache');
+      this.storage.set(this.questionareUUID, null);
     }
 
     return this.http.get('/assets/questions/questions.json').toPromise()
