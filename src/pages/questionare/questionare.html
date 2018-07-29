@@ -1,7 +1,14 @@
 <ion-content padding
   *ngIf="showQuestion"
   [style.background-color]="selectedQuestion.background">
-  <button (click)="exit()">X</button>
+  <button
+    (click)="exit()"
+    [style.color]="selectedQuestion.color"
+    ion-button
+    color="light"
+    outline>
+    X
+  </button>
   <question-answer
     [title]="pageTitle"
     [questionare]="questionare"

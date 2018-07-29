@@ -37,13 +37,14 @@ export class QuestionarePage {
 
   onUserSelectAnswer(answer) {
     this.saveUserAnswer(answer)
-      .then(() => this.goToNextQuestion())
+      .then((questionare) => this.goToNextQuestion(questionare))
       .then((showResults) => this.goToResults(showResults))
       .catch(() => {});
   }
 
   saveUserAnswer(answer) {
-    return this.questionareProvider.saveAnswerForQuestion(answer.id, this.selectedQuestionUUID);
+    return this.questionareProvider.saveAnswerForQuestion(answer.id, this.selectedQuestionUUID)
+      .then(() => this.questionareProvider.getQuestionare());
   }
 
   exit() {
@@ -51,24 +52,22 @@ export class QuestionarePage {
     this.navCtrl.goToRoot({});
   }
 
-  goToNextQuestion() {
-    this.questionareProvider.getQuestionare().then((questionare) => {
-      let questionsLeft = this.questionare.questions.filter(_ => _.answer === null);
+  goToNextQuestion(questionare) {
+    let questionsLeft = this.questionare.questions.filter(_ => _.answer === null);
 
-      if (questionsLeft.length === 0) {
-        return Promise.resolve(true);
-      }
+    if (questionsLeft.length === 0) {
+      return Promise.resolve(true);
+    }
 
-      let nextQuestion = questionsLeft[0];
-      this.navCtrl.push('QuestionarePage', { uuid: nextQuestion.uuid });
-    });
+    let nextQuestion = questionsLeft[0];
+    this.navCtrl.push('QuestionarePage', { uuid: nextQuestion.uuid });
   }
 
   goToResults(showResults) {
     if (!showResults) {
       return;
     }
-    let tally = this.questionare.questions.map(_ => parseInt(_.answer, 10)).reduce((a, b) => a + b, 0);
-    console.log('tally', tally);
+
+    this.navCtrl.push('ResultsPage');
   }
 }

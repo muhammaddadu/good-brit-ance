@@ -1,3 +1,23 @@
 page-results {
+    .content {
+        background-color: map-get($colors, 'primary');
+        background-image: url('/assets/gb/results-bg.png');
+        background-position: center center;
+        background-size: cover;
+    }
 
+
+    .gb-results--content {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: map-get($colors, 'light');
+    }
+
+    .gb-results--score {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }

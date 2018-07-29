@@ -12,6 +12,7 @@ import { QuestionarePageModule } from '../pages/questionare/questionare.module';
 
 import { IntroductionPageModule } from '../pages/introduction/introduction.module';
 import { ProvidersModule } from '../providers/providers.module';
+import { ResultsPageModule } from '../pages/results/results.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProvidersModule } from '../providers/providers.module';
     ComponentsModule,
     IntroductionPageModule,
     QuestionarePageModule,
+    ResultsPageModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],

@@ -1,3 +1,19 @@
 <ion-content padding>
-
+  <page-card-action>
+      <div class="page-card--content gb-results--content">
+          <h1 class="gb-results--title">FINISH</h1>
+          <div class="gb-results--score">
+            <p>Your score is:</p>
+            <span class="gb-font-h1">{{score}}</span>
+          </div>
+      </div>
+      <div class="page-card--footer">
+          <button
+              (click)="exit()"
+              ion-button full
+              color="danger">
+              Start Again
+          </button>
+      </div>
+  </page-card-action>
 </ion-content>

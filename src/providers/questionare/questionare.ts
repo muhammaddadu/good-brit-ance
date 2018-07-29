@@ -16,14 +16,14 @@ export class QuestionareProvider {
     this.questionareUUID = QUESTIONARE_ID;
   }
 
-  getQuestionare() {
+  getQuestionare(resetCache = false) {
     let newQuestionareData;
 
     return this.http.get('/assets/questions/questions.json').toPromise()
       .then((_questionareData) => newQuestionareData = _questionareData)
       .then(() => this.storage.get(this.questionareUUID))
       .then((data) => {
-        if (!data || newQuestionareData.version !== data.version) {
+        if (resetCache || !data || newQuestionareData.version !== data.version) {
           this.questionareData = newQuestionareData;
           return this.storage.set(this.questionareUUID, newQuestionareData);
         }

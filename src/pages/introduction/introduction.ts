@@ -15,7 +15,7 @@ export class IntroductionPage {
   ) {}
 
   start() {
-    this.questionareProvider.getQuestionare()
+    this.questionareProvider.getQuestionare(true)
       .then(() => this.questionareProvider.resetQuestionare())
       .then(_ => this.navCtrl.push('QuestionarePage', { uuid: '1' }));
   }

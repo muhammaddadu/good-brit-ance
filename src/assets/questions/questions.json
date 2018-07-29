@@ -1,6 +1,6 @@
 {
     "id": "tp-good-britance",
-    "version": "2",
+    "version": "420",
     "questions": [
         {
             "uuid": "1",
@@ -8,22 +8,22 @@
             "color": "rgb(159, 48, 0)",
             "image": "1.png",
             "text": "You are watching a show about a political topic. Jeremy Clarkson appears on it to give his opinion. Do you:",
-            "answer": "0",
+            "answer": 0,
             "answers": [
                 {
-                    "id": "-3",
-                    "text": "A: Become angered by his opinions and give the fact that he's been given a platform to air them.",
-                    "value": "-3"
-                },
-                {
                     "id": "0",
-                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
-                    "value": "0"
+                    "text": "A: Become angered by his opinions and give the fact that he's been given a platform to air them.",
+                    "value": -3
                 },
                 {
-                    "id": "3",
+                    "id": "1",
+                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "value": 0
+                },
+                {
+                    "id": "2",
                     "text": "C: Find your self nodding in agreement to everything he's saying.",
-                    "value": "3"
+                    "value": 3
                 }
             ]
         },
@@ -33,22 +33,22 @@
             "color": "white",
             "image": "2.png",
             "text": "You are watching a show about a political topic. xxxxx. Do you:",
-            "answer": "0",
+            "answer": 0,
             "answers": [
                 {
-                    "id": "-3",
-                    "text": "A: Become angered by his opinxxxxn a platform to air them.",
-                    "value": "-3"
-                },
-                {
                     "id": "0",
-                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
-                    "value": "0"
+                    "text": "A: Become angered by his opinxxxxn a platform to air them.",
+                    "value": -3
                 },
                 {
-                    "id": "3",
+                    "id": "1",
+                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "value": 0
+                },
+                {
+                    "id": "2",
                     "text": "C: Find your self nodding in agreement to everything he's saying.",
-                    "value": "3"
+                    "value": -3
                 }
             ]
         }
