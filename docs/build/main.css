@@ -3826,6 +3826,14 @@ ion-icon::before {
   color: #f4f4f4;
 }
 
+.gb-font-h1 {
+  font-family: 'PressStart2P';
+  text-align: center;
+  -webkit-text-decoration: black;
+  text-decoration: black;
+  font-size: 46px;
+}
+
 .gb-font-subtitle {
   font-family: 'PressStart2P';
   text-align: center;
@@ -25701,6 +25709,19 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+@media screen and (min-width: 600px) {
+  .retro-container .scroll-content {
+    max-width: 600px;
+    max-height: 800px;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: calc(50% - 300px);
+  }
+}
+
 page-card-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -25717,7 +25738,6 @@ page-card-action {
   justify-content: space-between;
   height: 100%;
   margin: 0 auto;
-  max-width: 400px;
 }
 
 page-card-action .page-card--header {
@@ -25777,11 +25797,25 @@ question-answer .gb-question-answer--answers {
 }
 
 question-answer .gb-question-answer--answers .gb-question-answer--answers-answer {
-  background: white;
+  background-color: white;
   padding: 4px;
   margin: 7px 0;
   -webkit-box-shadow: 1px 2px black;
   box-shadow: 1px 2px black;
+  -webkit-animation: MovingHorizontally 600ms ease-in-out;
+  animation: MovingHorizontally 600ms ease-in-out;
+}
+
+question-answer .gb-question-answer--answers .gb-question-answer--answers-answer.--plus {
+  background-color: green;
+}
+
+question-answer .gb-question-answer--answers .gb-question-answer--answers-answer.--nutral {
+  background-color: yellow;
+}
+
+question-answer .gb-question-answer--answers .gb-question-answer--answers-answer.--minus {
+  background-color: red;
 }
 
 page-introduction .content {
@@ -25876,4 +25910,52 @@ page-introduction .gb-introduction-flag {
   100% {
     margin-left: 100%;
   }
+}
+
+page-results .content {
+  background-color: #2464f6;
+  background-image: url("/assets/gb/results-bg.png");
+  background-position: center center;
+  background-size: cover;
+}
+
+page-results .gb-results--title {
+  background-image: url("/assets/gb/results-title.png");
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: transparent;
+  width: 100%;
+  height: 40px;
+}
+
+page-results .gb-results--content {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #f4f4f4;
+}
+
+page-results .gb-results--score {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
 }
