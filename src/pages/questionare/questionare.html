@@ -1,9 +1,11 @@
 <ion-content padding
-  [style.background-color]="question.background">
+  *ngIf="showQuestion"
+  [style.background-color]="selectedQuestion.background">
+  <button (click)="exit()">X</button>
   <question-answer
-    [questions]="questions"
-    [selectedQuestionNumber]="questionNumber"
-    [selectedQuestion]="question"
-    (selectedAnswer)="onSelectedAnswer($event)">
+    [title]="pageTitle"
+    [questionare]="questionare"
+    [selectedQuestion]="selectedQuestion"
+    (onUserSelectAnswer)="onUserSelectAnswer($event)">
   </question-answer>
 </ion-content>

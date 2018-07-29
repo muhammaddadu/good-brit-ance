@@ -17,7 +17,7 @@ export class MyApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen
   ) {
-    platform.ready().then(() => this.onPlatformReady);
+    platform.ready().then(() => this.onPlatformReady());
   }
 
   onPlatformReady() {

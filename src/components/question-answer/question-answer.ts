@@ -9,17 +9,18 @@ import { Component, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'question-answer',
   templateUrl: 'question-answer.html',
-  inputs: ['selectedQuestionNumber', 'selectedQuestion', 'questions']
+  inputs: ['title', 'selectedQuestion', 'questionare']
 })
 export class QuestionAnswerComponent {
-  questions: any = [];
-  selectedQuestionNumber: number;
+  title: any = 'QUESTION 1/20';
+  questionare: any = [];
   selectedQuestion: any = {};
-  @Output() selectedAnswer = new EventEmitter<any>();
+
+  @Output() onUserSelectAnswer = new EventEmitter<any>();
 
   constructor() {}
 
   selectAnswer(answer) {
-    this.selectedAnswer.emit(answer);
+    this.onUserSelectAnswer.emit(answer);
   }
 }

@@ -3,7 +3,7 @@ import { NavController, NavParams, IonicPage } from 'ionic-angular';
 import { QuestionareProvider } from '../../providers/questionare/questionare';
 
 @IonicPage({
-  segment: 'questionare/:id'
+  segment: 'questionare/:uuid'
 })
 @Component({
   selector: 'page-questionare',
@@ -11,39 +11,64 @@ import { QuestionareProvider } from '../../providers/questionare/questionare';
 })
 export class QuestionarePage {
   showQuestion: boolean = false;
-  questionNumber: number = 1;
-  questions: any = [];
-  question: any = {};
+  selectedQuestionUUID: string;
+  pageTitle: string = '';
+
+  questionare: any = [];
+  selectedQuestion: any = {};
 
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public questionareProvider: QuestionareProvider
   ) {
-    this.questionNumber = parseInt(this.navParams.data.id, 10);
-    this.questionareProvider.getQuestions()
-      .then((questions) => this.questions = questions)
-      .then(() => this.getQuestion())
-  }
+    this.selectedQuestionUUID = this.navParams.get('uuid');
 
-  getQuestion() {
-    this.questionareProvider.getQuestionByIndex(this.questionNumber)
-      .then((question) => this.question = question)
+    this.questionareProvider.getQuestionare()
+      .then((questionare) => this.questionare = questionare)
+      .then(() => this.questionareProvider.getQuestionByUUID(this.selectedQuestionUUID))
+      .then((selectedQuestion) => this.selectedQuestion = selectedQuestion)
       .then(() => {
+        let questionsDone = this.questionare.questions.filter(_ => _.answer !== null).length + 1;
+        this.pageTitle = 'QUESTION ' + questionsDone + '/' + this.questionare.questions.length;
         this.showQuestion = true;
       });
   }
 
-  onSelectedAnswer(answer) {
-    // store the result
+  onUserSelectAnswer(answer) {
+    this.saveUserAnswer(answer)
+      .then(() => this.goToNextQuestion())
+      .then((showResults) => this.goToResults(showResults))
+      .catch(() => {});
+  }
 
-    // go to next question
-    if (this.questionNumber < this.questions.length) {
-      this.navCtrl.push('QuestionarePage', {id: this.questionNumber + 1});
+  saveUserAnswer(answer) {
+    return this.questionareProvider.saveAnswerForQuestion(answer.id, this.selectedQuestionUUID);
+  }
+
+  exit() {
+    this.navCtrl.setRoot('IntroductionPage');
+    this.navCtrl.goToRoot({});
+  }
+
+  goToNextQuestion() {
+    this.questionareProvider.getQuestionare().then((questionare) => {
+      let questionsLeft = this.questionare.questions.filter(_ => _.answer === null);
+
+      if (questionsLeft.length === 0) {
+        return Promise.resolve(true);
+      }
+
+      let nextQuestion = questionsLeft[0];
+      this.navCtrl.push('QuestionarePage', { uuid: nextQuestion.uuid });
+    });
+  }
+
+  goToResults(showResults) {
+    if (!showResults) {
       return;
     }
-
-    // show results screen
-
+    let tally = this.questionare.questions.map(_ => parseInt(_.answer, 10)).reduce((a, b) => a + b, 0);
+    console.log('tally', tally);
   }
 }
