@@ -569,7 +569,7 @@ var QuestionarePage = /** @class */ (function () {
     };
     QuestionarePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-questionare',template:/*ion-inline-start:"/Users/mdadu/Developer/ThisPlace/repos/Innovations/good-brit-ance/good-brit-ance/src/pages/questionare/questionare.html"*/'<ion-content padding\n  *ngIf="showQuestion"\n  [style.background-color]="selectedQuestion.background">\n  <button\n    (click)="exit()"\n    [style.color]="selectedQuestion.color"\n    ion-button\n    color="light"\n    outline>\n    X\n  </button>\n  <question-answer\n    [title]="pageTitle"\n    [questionare]="questionare"\n    [selectedQuestion]="selectedQuestion"\n    (onUserSelectAnswer)="onUserSelectAnswer($event)">\n  </question-answer>\n</ion-content>\n'/*ion-inline-end:"/Users/mdadu/Developer/ThisPlace/repos/Innovations/good-brit-ance/good-brit-ance/src/pages/questionare/questionare.html"*/,
+            selector: 'page-questionare',template:/*ion-inline-start:"/Users/mdadu/Developer/ThisPlace/repos/Innovations/good-brit-ance/good-brit-ance/src/pages/questionare/questionare.html"*/'<ion-content padding\n  *ngIf="showQuestion"\n  [style.background-color]="selectedQuestion.background">\n  <button\n    (click)="exit()"\n    class="questionare-close-button"\n    [style.color]="selectedQuestion.color"\n    ion-button\n    color="light"\n    outline>\n    <ion-icon name="arrow-down"></ion-icon>\n  </button>\n  <question-answer\n    [title]="pageTitle"\n    [questionare]="questionare"\n    [selectedQuestion]="selectedQuestion"\n    (onUserSelectAnswer)="onUserSelectAnswer($event)">\n  </question-answer>\n</ion-content>\n'/*ion-inline-end:"/Users/mdadu/Developer/ThisPlace/repos/Innovations/good-brit-ance/good-brit-ance/src/pages/questionare/questionare.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */],
@@ -731,11 +731,14 @@ var QuestionareProvider = /** @class */ (function () {
         var _this = this;
         if (resetCache === void 0) { resetCache = false; }
         var newQuestionareData;
+        if (this.questionareData && resetCache) {
+            this.questionareData.version = 'hard-reset';
+        }
         return this.http.get('/assets/questions/questions.json').toPromise()
             .then(function (_questionareData) { return newQuestionareData = _questionareData; })
             .then(function () { return _this.storage.get(_this.questionareUUID); })
             .then(function (data) {
-            if (resetCache || !data || newQuestionareData.version !== data.version) {
+            if (!data || newQuestionareData.version !== data.version) {
                 _this.questionareData = newQuestionareData;
                 return _this.storage.set(_this.questionareUUID, newQuestionareData);
             }

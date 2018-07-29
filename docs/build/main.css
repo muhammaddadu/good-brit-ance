@@ -25912,6 +25912,13 @@ page-introduction .gb-introduction-flag {
   }
 }
 
+page-questionare .questionare-close-button {
+  position: absolute;
+  border: 0;
+  padding: 0;
+  height: 25px;
+}
+
 page-results .content {
   background-color: #2464f6;
   background-image: url("/assets/gb/results-bg.png");
