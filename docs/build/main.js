@@ -729,10 +729,10 @@ var QuestionareProvider = /** @class */ (function () {
     }
     QuestionareProvider.prototype.getQuestionare = function (resetCache) {
         var _this = this;
-        if (resetCache === void 0) { resetCache = false; }
         var newQuestionareData;
-        if (this.questionareData && resetCache) {
-            this.questionareData.version = 'hard-reset';
+        if (resetCache) {
+            console.log('resetting cache');
+            this.storage.set(this.questionareUUID, null);
         }
         return this.http.get('/assets/questions/questions.json').toPromise()
             .then(function (_questionareData) { return newQuestionareData = _questionareData; })
