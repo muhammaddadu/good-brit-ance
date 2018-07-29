@@ -3,11 +3,12 @@
   [style.background-color]="selectedQuestion.background">
   <button
     (click)="exit()"
+    class="questionare-close-button"
     [style.color]="selectedQuestion.color"
     ion-button
     color="light"
     outline>
-    X
+    <ion-icon name="arrow-down"></ion-icon>
   </button>
   <question-answer
     [title]="pageTitle"

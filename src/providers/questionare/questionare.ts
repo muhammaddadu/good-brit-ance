@@ -19,11 +19,15 @@ export class QuestionareProvider {
   getQuestionare(resetCache = false) {
     let newQuestionareData;
 
+    if (this.questionareData && resetCache) {
+      this.questionareData.version = 'hard-reset';
+    }
+
     return this.http.get('/assets/questions/questions.json').toPromise()
       .then((_questionareData) => newQuestionareData = _questionareData)
       .then(() => this.storage.get(this.questionareUUID))
       .then((data) => {
-        if (resetCache || !data || newQuestionareData.version !== data.version) {
+        if (!data || newQuestionareData.version !== data.version) {
           this.questionareData = newQuestionareData;
           return this.storage.set(this.questionareUUID, newQuestionareData);
         }
