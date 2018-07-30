@@ -40,8 +40,7 @@ export class ResultsPage {
   }
 
   exit() {
-    console.log('this exists init');
     this.navCtrl.setRoot('IntroductionPage');
-    this.navCtrl.goToRoot({});
+    this.navCtrl.popToRoot();
   }
 }

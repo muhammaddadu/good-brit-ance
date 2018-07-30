@@ -49,7 +49,7 @@ export class QuestionarePage {
 
   exit() {
     this.navCtrl.setRoot('IntroductionPage');
-    this.navCtrl.goToRoot({});
+    this.navCtrl.popToRoot();
   }
 
   goToNextQuestion(questionare) {
