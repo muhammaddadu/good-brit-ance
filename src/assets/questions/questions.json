@@ -1,35 +1,35 @@
 {
     "id": "tp-good-britance",
-    "version": "420",
+    "version": "190",
     "questions": [
         {
             "uuid": "1",
-            "background": "yellow",
+            "background": "#FFCC66",
             "color": "rgb(159, 48, 0)",
             "image": "1.png",
-            "text": "You are watching a show about a political topic. Jeremy Clarkson appears on it to give his opinion. Do you:",
+            "text": "Jeremy Clarkson gives his opinion on a political topic. Do you:",
             "answer": 0,
             "answers": [
                 {
                     "id": "0",
-                    "text": "A: Become angered by his opinions and give the fact that he's been given a platform to air them.",
-                    "value": -3
+                    "text": "A: Become angered by his opinions and the fact that he's been given a platform to air them.",
+                    "value": 3
                 },
                 {
                     "id": "1",
-                    "text": "B: Remain indifferent. You're not really paying attention. You'r just waiting for the next show",
+                    "text": "B: Remain indifferent. You're not really that bothered.",
                     "value": 0
                 },
                 {
                     "id": "2",
                     "text": "C: Find your self nodding in agreement to everything he's saying.",
-                    "value": 3
+                    "value": -3
                 }
             ]
         },
         {
             "uuid": "2",
-            "background": "purple",
+            "background": "#5252b6",
             "color": "white",
             "image": "2.png",
             "text": "You`re in a city centre. You see a 20 something man walking round wearing deep v t-shirt, skin tight fashin-ripped jeans and flip-flops. Your first thought is:",
@@ -38,7 +38,7 @@
                 {
                     "id": "0",
                     "text": "A: Tool",
-                    "value": -3
+                    "value": 3
                 },
                 {
                     "id": "1",
@@ -54,7 +54,7 @@
         },
         {
             "uuid": "3",
-            "background": "green",
+            "background": "#66cc66",
             "color": "white",
             "image": "3.png",
             "text": "You`re on holiday in a foreign contry and want to get something to eat. Do you:",
@@ -63,23 +63,23 @@
                 {
                     "id": "0",
                     "text": "A: I don`t tend to traval abroad",
-                    "value": 3
+                    "value": 0
                 },
                 {
                     "id": "1",
                     "text": "B: Find somewhere interesting that serves the local food.",
-                    "value": -3
+                    "value": 3
                 },
                 {
                     "id": "2",
                     "text": "C: Make a beeline for the nearest Mc Donald`s.",
-                    "value": 0
+                    "value": -3
                 }
             ]
         },
         {
             "uuid": "4",
-            "background": "maroon",
+            "background": "#660033",
             "color": "white",
             "image": "4.png",
             "text": "You`re driving and listening to the radio when a Bruno Mars song comes on. Which of the following do you do:",
@@ -88,23 +88,23 @@
                 {
                     "id": "0",
                     "text": "A: Wonder if Bruno Mars is playing at the 02 any time soon.",
-                    "value": 3
+                    "value": -3
                 },
                 {
                     "id": "1",
                     "text": "B: Hmm along without really listening.",
-                    "value": -3
+                    "value": 0
                 },
                 {
                     "id": "2",
                     "text": "C: Immediately Turn the radio off, or over to a different channel.",
-                    "value": 0
+                    "value": 3
                 }
             ]
         },
         {
             "uuid": "5",
-            "background": "blue",
+            "background": "#417ff0",
             "color": "white",
             "image": "5.png",
             "text": "You`re in the centre of London - a capital city rich in culture and history. You walk by M&M world. Do you think:",
@@ -113,12 +113,12 @@
                 {
                     "id": "0",
                     "text": "A: Just what I need an M&M towel / t-shirt / slippers / ashtray!",
-                    "value": 3
+                    "value": -3
                 },
                 {
                     "id": "1",
                     "text": "B: Why does London need an M&M World??",
-                    "value": -3
+                    "value": 3
                 },
                 {
                     "id": "2",
@@ -129,7 +129,7 @@
         },
         {
             "uuid": "6",
-            "background": "yellow",
+            "background": "#f0de87",
             "color": "maroon",
             "image": "6.png",
             "text": "You`re sat at home with your significant other and they are watching TOWIE. You think:",
@@ -143,18 +143,18 @@
                 {
                     "id": "1",
                     "text": "B: It's just something to have on.",
-                    "value": -3
+                    "value": 0
                 },
                 {
                     "id": "2",
                     "text": "C: This is great TV.",
-                    "value": 0
+                    "value": -3
                 }
             ]
         },
         {
             "uuid": "7",
-            "background": "lightblue",
+            "background": "#6699cc",
             "color": "white",
             "image": "7.png",
             "text": "You are in an art gallery with a contemporary art exhibition. Are you likely to think:",
@@ -168,18 +168,18 @@
                 {
                     "id": "1",
                     "text": "B: I`d never visit an art gallery..",
-                    "value": -3
+                    "value": 0
                 },
                 {
                     "id": "2",
                     "text": "C: Not for me. I think I prefer watercolours.",
-                    "value": 0
+                    "value": -3
                 }
             ]
         },
         {
             "uuid": "8",
-            "background": "turquoise",
+            "background": "#009999",
             "color": "white",
             "image": "8.png",
             "text": "When you see an image of Boris Johnson do you think:",
@@ -204,7 +204,7 @@
         },
         {
             "uuid": "9",
-            "background": "lightpink",
+            "background": "#aba2a7",
             "color": "black",
             "image": "9.png",
             "text": "You`re reading a Daily Mail article on the EU. Your thoughts are:",
@@ -213,7 +213,7 @@
                 {
                     "id": "0",
                     "text": "A: I don`t read newspapers",
-                    "value": 3
+                    "value": 0
                 },
                 {
                     "id": "1",
@@ -223,13 +223,13 @@
                 {
                     "id": "2",
                     "text": "C: Hang on... there`s no way I`d be reading the Daily Mail.",
-                    "value": 0
+                    "value": 3
                 }
             ]
         },
         {
             "uuid": "10",
-            "background": "pink",
+            "background": "#eea8c9",
             "color": "black",
             "image": "10.png",
             "text": "It`s a royal wedding / birth / funeral. What`s your reaction:",
@@ -238,12 +238,12 @@
                 {
                     "id": "0",
                     "text": "A: AMAZING, best news ever. I`m off to get a prime spot outside Buckingham Palace / Windsor Castle right now!",
-                    "value": 3
+                    "value": -3
                 },
                 {
                     "id": "1",
                     "text": "B: Day off work: PARTY TIME!",
-                    "value": -3
+                    "value": 3
                 },
                 {
                     "id": "2",
