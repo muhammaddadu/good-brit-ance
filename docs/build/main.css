@@ -25787,7 +25787,8 @@ question-answer .gb-question-answer--image {
 }
 
 question-answer .gb-question-answer--question {
-  font-size: 1.2em;
+  font-size: 1em;
+  line-height: 1.6em;
 }
 
 question-answer .gb-question-answer--answers {
@@ -25802,6 +25803,8 @@ question-answer .gb-question-answer--answers .gb-question-answer--answers-answer
   margin: 7px 0;
   -webkit-box-shadow: 1px 2px black;
   box-shadow: 1px 2px black;
+  font-size: 0.9em;
+  line-height: 1.6em;
   -webkit-animation: MovingHorizontally 600ms ease-in-out;
   animation: MovingHorizontally 600ms ease-in-out;
 }
